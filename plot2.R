@@ -36,8 +36,6 @@ rm(first_date)
 rm(second_date)
 rm(t)
 
-# Plot-specific data conversion
-date_weekdays<-format(project_data$Date, "%a")
 
 
 ####################################################################
