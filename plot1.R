@@ -1,8 +1,9 @@
-####################################################################
+#######################################################################################
 # Getting and cleaning Data
-####################################################################
+#######################################################################################
 
-hpc<-read.table("household_power_consumption.txt", sep=";" , header=TRUE, na.strings="?")
+hpc<-read.table("household_power_consumption.txt", sep=";" ,
+                header=TRUE, na.strings="?")
 
 # Convert Date column to Date-type:
 hpc$Date<-as.Date(as.character(hpc$Date), "%d/%m/%Y")
@@ -36,10 +37,12 @@ rm(first_date)
 rm(second_date)
 rm(t)
 
-####################################################################
+#######################################################################################
 # Plotting
-####################################################################
+#######################################################################################
 png("plot1.png")
-with(project_data, hist(Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)"))
+with(project_data, hist(Global_active_power, col="red",
+                        main="Global Active Power", 
+                        xlab="Global Active Power (kilowatts)"))
 dev.off()
 
